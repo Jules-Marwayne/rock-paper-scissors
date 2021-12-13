@@ -52,10 +52,10 @@ btn.addEventListener("click", function(e) {
         }
     }
     if (playerScore === 5 && playerScore > computerScore) {
-        document.querySelector("#winner").textContent = "You won the game! Congratulations!";
+        document.querySelector("#winner").innerHTML = "You won the game! <br>Congratulations!";
         resetScores();
     } else if (computerScore === 5 && computerScore > playerScore) {
-        document.querySelector("#winner").textContent = "You lost! Better luck next time";
+        document.querySelector("#winner").innerHTML = "You lost!<br> Better luck next time";
         resetScores();
     }
 });
@@ -71,32 +71,3 @@ function showScores() {
     document.querySelector("#computerScore").textContent = computerScore;
     return;
 }
-
-// function rockPaperScissors(playerSelection, computerSelection) {
-//     if (playerSelection && computerSelection) {
-//         if (playerSelection === computer) {
-//             return "Draw";
-//         } else if (playerSelection === "rock") {
-//             if (computer === "scissors") {
-//                 message = "You Win! Rock beats Scissors";
-//             } else {
-//                 message = "You Lose! Paper beats Rock";
-//             }
-//         } else if (playerSelection === "paper") {
-//             if (computer === "rock") {
-//                 message = "You Win! Paper beats Rock";
-//             } else {
-//                 message = "You Lose! Scissors beats Paper";
-//             }
-//         } else if (playerSelection === "scissors") {
-//             if (computer === "paper") {
-//                 message = "You Win! Scissors beats Paper";
-//             } else {
-//                 message = "You Lose! Rock beats Scissors";
-//             }
-//         } else {
-//             rockPaperScissors(prompt("Enter a valid option:"), computerPlay());
-//         }
-//         return message;
-//     }
-// }
